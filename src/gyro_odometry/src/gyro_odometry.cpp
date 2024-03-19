@@ -4,7 +4,7 @@
 #include <cstring>
 #include <iostream>
 
-bool serialopen = 1; //when serial is open, change it to 1, otherwise, change it to 0;
+bool serialopen = 0; //when serial is open, change it to 1, otherwise, change it to 0;
 float data_value[13];
 class TwistWithCovarianceNode : public rclcpp::Node
 {
