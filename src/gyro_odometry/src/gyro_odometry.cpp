@@ -55,11 +55,11 @@ private:
 
             msg.header.stamp = rclcpp::Clock{}.now();
             msg.header.frame_id = "twist_with_covariance";
-            msg.twist.twist.linear.x = data_value[7];
-            msg.twist.twist.linear.y = data_value[8];
+            msg.twist.twist.linear.x = data_value[8];
+            msg.twist.twist.linear.y = -data_value[7];
             msg.twist.twist.linear.z = data_value[9];
-            msg.twist.twist.angular.x = data_value[10];
-            msg.twist.twist.angular.y = data_value[11];
+            msg.twist.twist.angular.x = data_value[11];
+            msg.twist.twist.angular.y = -data_value[10];
             msg.twist.twist.angular.z = data_value[12];
             publisher_->publish(msg);
         }
